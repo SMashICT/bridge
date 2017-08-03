@@ -49,7 +49,7 @@ public final class RequestBuilder implements AsResultsExceptions, Serializable {
     this.url = url;
     this.method = method;
 
-    headers = cf.defaultHeaders;
+    headers = new HashMap<String, Object>(cf.defaultHeaders);
     connectTimeout = cf.connectTimeout;
     readTimeout = cf.readTimeout;
     bufferSize = cf.bufferSize;
